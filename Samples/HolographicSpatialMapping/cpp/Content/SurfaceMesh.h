@@ -63,6 +63,7 @@ namespace WindowsHolographicCodeSamples
             );
 
         Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh^ m_surfaceMesh = nullptr;
+        Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh^ m_pendingSurfaceMesh = nullptr;
 
         Microsoft::WRL::ComPtr<ID3D11Buffer> m_vertexPositions;
         Microsoft::WRL::ComPtr<ID3D11Buffer> m_vertexNormals;
@@ -81,7 +82,6 @@ namespace WindowsHolographicCodeSamples
 
         bool   m_constantBufferCreated = false;
         bool   m_loadingComplete    = false;
-        bool   m_updateNeeded       = false;
         bool   m_updateReady        = false;
         bool   m_isActive           = false;
         float  m_lastActiveTime     = -1.f;
